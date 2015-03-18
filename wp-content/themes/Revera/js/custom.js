@@ -21,8 +21,12 @@ jQuery(window).load(function() {
 		jQuery(function(){   
 			var nav = jQuery('#masthead');   
 			jQuery(window).scroll(function () { 
-				if (jQuery(this).scrollTop() > 5) { 
-					nav.addClass("menu-fixo"); 
+				if (jQuery(this).scrollTop() > 150) {
+					if(!nav.hasClass('menu-fixo')){
+					var navheight = nav.height();
+					var navTop = nav.offset().top;
+					nav.css({'top':'-' +navheight+'px'}).addClass("menu-fixo").animate({'top' : parseInt(navTop)+'px'}, 1000);
+				} 
 				} else { 
 					nav.removeClass("menu-fixo"); 
 				}

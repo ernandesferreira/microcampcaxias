@@ -72,16 +72,6 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
-
-
-
-
-
-
-
-
-
-
 <div class="container">	
 	<div class="row">
 	<section id="primary" class="content-area col-sm-8">

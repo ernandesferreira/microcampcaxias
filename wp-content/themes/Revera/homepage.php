@@ -65,8 +65,8 @@ get_header(); ?>
 	
 	<div class="boxitems">
 		 <?php 	
-		 $port_cat =ft_of_get_option('fabthemes_portfolio');
-		 $query = new WP_Query( array( 'cat' => -$port_cat,'posts_per_page' =>4 ) );
+		 $port_cat = 'noticias';
+		 $query = new WP_Query( array( 'category_name' => $port_cat, 'posts_per_page' =>4 ) );
 		 if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();	?>
 		 	
 		 <div class="col-sm-3 col-6 postbox">
