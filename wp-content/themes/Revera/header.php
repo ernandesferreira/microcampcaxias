@@ -36,7 +36,7 @@
 		</div>
 		
 		<div class="col-sm-8 mainmenu">
-		 <div class="telefone" style="line-height: 88px;float:left;">Telefone: 21 3523-7898 </div>
+		 <div class="telefone" style="line-height: 88px;float:left;"><span class="glyphicon glyphicon-earphone phone-icon" aria-hidden="true"></span> <span class="ddd">21</span> 3528-1600 </div>
 		<div class="mobilenavi"></div>
 				<?php wp_nav_menu( array( 'container_id' => 'submenu', 'theme_location' => 'primary','container_class' => 'topmenu','menu_id'=>'topmenu' ,'menu_class'=>'sfmenu' ) ); ?>
 		</div>
