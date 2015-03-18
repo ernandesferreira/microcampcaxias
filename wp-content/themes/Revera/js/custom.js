@@ -16,7 +16,18 @@ jQuery(window).load(function() {
     
     jQuery('#topmenu').mobileMenu({
 			prependTo:'.mobilenavi'
-			});	
+			});
+
+		jQuery(function(){   
+			var nav = jQuery('#masthead');   
+			jQuery(window).scroll(function () { 
+				if (jQuery(this).scrollTop() > 5) { 
+					nav.addClass("menu-fixo"); 
+				} else { 
+					nav.removeClass("menu-fixo"); 
+				}
+			});  
+		});	
 	
     
 });

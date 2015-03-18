@@ -42,6 +42,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	outline: 0;
 	padding: 0;
 	vertical-align: baseline;
+
 }
 html {
 	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
@@ -51,6 +52,7 @@ html {
 }
 body {
 	background: #fff;
+	transition: all 0.4s;
 }
 article,
 aside,

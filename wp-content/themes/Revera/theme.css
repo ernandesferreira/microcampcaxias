@@ -43,7 +43,14 @@ a:active {
 /* Head */
 
 #masthead{
-	position: relative;
+	z-index: 999;
+	background-color: #fff;
+	width: 100%;
+	border-bottom: 1px solid #c0c0c0;
+}
+.menu-fixo{
+	position: fixed;
+	z-index: 99;
 }
 .site-branding{
 	margin-bottom: 20px;
@@ -87,7 +94,7 @@ nav.main-navigation{
 	margin: 15px 0px;
 	height:60px;
 	border-bottom: none;
-	float: left;
+	float: right;
 
 
 	}
