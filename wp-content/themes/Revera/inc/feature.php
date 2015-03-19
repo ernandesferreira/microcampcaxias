@@ -16,13 +16,13 @@
 					?>
 					
 					<?php if($image) : ?>
-						<a href="<?php the_permalink(); ?>"><img class="grayscale"  src="<?php echo $image ?>"/></a>
+						<a href="<?php echo get_field('link-banner'); ?>"><img class="grayscale"  src="<?php echo $image ?>"/></a>
 					<?php endif; ?>
 	
 					<div class="flex-caption">
 						<h2><?php the_title(); ?></h2>
-						<?php the_excerpt(); ?>
-						<a class="frmore" href="<?php the_permalink(); ?>"> SAIBA MAIS </a>
+						<?php echo get_field('descricao-banner'); ?>
+						<a class="frmore" href="<?php echo get_field('link-banner'); ?>"> SAIBA MAIS </a>
 					</div>
 			<?php endwhile; endif; ?>
 					    		
@@ -35,24 +35,28 @@
 	<div class="container">
 		<div class="row">
 			
-			<div class="col-sm-4 homewidget">
-				
+			<div class="col-sm-3 homewidget">				
 				<span><i class="glyphicon <?php echo ft_of_get_option('fabthemes_left_icon'); ?>"></i></span>
 				<h3> <?php echo ft_of_get_option('fabthemes_left_title'); ?></h3>
 				<p> <?php echo ft_of_get_option('fabthemes_left_text'); ?> </p>
 			</div>	
 			
-			<div class="col-sm-4 homewidget">
-				<span><i class="glyphicon <?php echo ft_of_get_option('fabthemes_middle_icon'); ?>"></i></span>
-				<h3>  <?php echo ft_of_get_option('fabthemes_middle_title'); ?></h3>
-				<p> <?php echo ft_of_get_option('fabthemes_middle_text'); ?> </p>
+			<div class="col-sm-3 homewidget">
+				<span><i class="glyphicon <?php echo ft_of_get_option('fabthemes_center_icon'); ?>"></i></span>
+				<h3>  <?php echo ft_of_get_option('fabthemes_center_title'); ?></h3>
+				<p> <?php echo ft_of_get_option('fabthemes_center_text'); ?> </p>
 			</div>	
 			
-			<div class="col-sm-4 homewidget">
+			<div class="col-sm-3 homewidget">
 				<span><i class="glyphicon <?php echo ft_of_get_option('fabthemes_right_icon'); ?>"></i></span>
 				<h3> <?php echo ft_of_get_option('fabthemes_right_title'); ?></h3>
 				<p> <?php echo ft_of_get_option('fabthemes_right_text'); ?> </p>
-			</div>	
+			</div>
+			<div class="col-sm-3 homewidget">
+				<span><i class="glyphicon <?php echo ft_of_get_option('fabthemes_middle_icon'); ?>"></i></span>
+				<h3>  <?php echo ft_of_get_option('fabthemes_middle_title'); ?></h3>
+				<p> <?php echo ft_of_get_option('fabthemes_middle_text'); ?> </p>
+			</div>		
 			
 		</div>
 	</div>

@@ -104,8 +104,26 @@ function FT_OP_options()
 						"desc" => "Enter the glyphicon name. Check http://glyphicons.getbootstrap.com/",
 						"id" => "fabthemes_left_icon",
 						"std" => "glyphicon-glass",
-						"type" => "text");	
-										
+						"type" => "text");
+
+
+		$options[] = array( "name" => "Center widget title",
+						"desc" => "Enter the title for center widget",
+						"id" => "fabthemes_center_title",
+						"std" => "Title goes here",
+						"type" => "text");
+						
+	$options[] = array( "name" => "Center widget text",
+						"desc" => "Text for your center widget",
+						"id" => "fabthemes_center_text",
+						"std" => "Text goes here",
+						"type" => "textarea"); 	
+						
+	$options[] = array( "name" => "Center widget icon",
+						"desc" => "Enter the glyphicon name. Check http://glyphicons.getbootstrap.com/",
+						"id" => "fabthemes_center_icon",
+						"std" => "glyphicon-star",
+						"type" => "text");										
 		
 
 						
@@ -125,7 +143,7 @@ function FT_OP_options()
 						"desc" => "Enter the glyphicon name. Check http://glyphicons.getbootstrap.com/",
 						"id" => "fabthemes_middle_icon",
 						"std" => "glyphicon-star",
-						"type" => "text");	
+						"type" => "text");
 										
 						
 						
@@ -146,8 +164,8 @@ function FT_OP_options()
 						"desc" => "Enter the glyphicon name. Check http://glyphicons.getbootstrap.com/",
 						"id" => "fabthemes_right_icon",
 						"std" => "glyphicon-heart",
-						"type" => "text");	
-						
+						"type" => "text");
+					
 						
 						
 					
