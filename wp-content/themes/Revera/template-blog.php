@@ -75,7 +75,7 @@ get_header(); ?>
 
 
 		 $port_cat = 'noticias';
-		 $query = new WP_Query( array( 'post_type' = 'posts', 'category_name' => $port_cat) );
+		 $query = new WP_Query( array( 'post_type' => 'post', 'category_name' => $port_cat) );
 		 if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();	
 
 			//echo '<pre>' . print_r( $q, true ) . '</pre>'; 
