@@ -33,41 +33,33 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-meta">
-		<?php
-			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'web2feel' ) );
-
-			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'web2feel' ) );
-/*
-			if ( ! web2feel_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'web2feel' );
-				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'web2feel' );
-				}
-
-			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'web2feel' );
-				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'web2feel' );
-				}
-
-			} // end check for categories on this blog
-*/
-			printf(
-				$meta_text,
-				$category_list,
-				$tag_list,
-				get_permalink(),
-				the_title_attribute( 'echo=0' )
-			);
-		?>
-
-		<?php edit_post_link( __( 'Edit', 'web2feel' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-meta -->
+		<footer class="entry-meta">
+					<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+						<?php
+							/* translators: used between list items, there is a space after the comma */
+							$categories_list = get_the_category_list( __( ', ', 'web2feel' ) );
+							if ( $categories_list && web2feel_categorized_blog() ) :
+						?>
+						<span class="cat-links">
+							<?php printf( __( 'Postado em %1$s', 'web2feel' ), $categories_list ); ?>
+						</span>
+						<?php endif; // End if categories ?>
+			
+						<?php
+							/* translators: used between list items, there is a space after the comma */
+							$tags_list = get_the_tag_list( '', __( ', ', 'web2feel' ) );
+							if ( $tags_list ) :
+						?>
+						<span class="tags-links">
+							<?php printf( __( 'Tags %1$s', 'web2feel' ), $tags_list ); ?>
+						</span>
+						<?php endif; // End if $tags_list ?>
+					<?php endif; // End if 'post' == get_post_type() ?>
+			
+					<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+					<span class="comments-link"><?php comments_popup_link( __( 'Deixe um comentário', 'web2feel' ), __( '1 Comentário', 'web2feel' ), __( '% Comentários', 'web2feel' ) ); ?></span>
+					<?php endif; ?>
+			
+					<?php edit_post_link( __( 'Editar', 'web2feel' ), '<span class="edit-link">', '</span>' ); ?>
+				</footer><!-- .entry-meta -->
 </article><!-- #post-## -->
