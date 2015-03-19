@@ -866,6 +866,7 @@ h3.bothead{
 .fcred{
 	padding: 10px 0px;
 	color: #eee;
+	text-align: center;
 }
 
 .fcred a:link, .fcred a:visited{
@@ -910,3 +911,45 @@ h3.bothead{
 #bottom .container .row .widget_facebook_likebox iframe{
 	background-color: #323131!important
 }
+.telefone{
+	line-height: 88px;
+	float: left;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 414px) {
+  .menu-fixo{
+  	position: relative; 
+  }
+  .telefone{
+	line-height: normal;
+	float: none;
+	text-align: center;
+	height: 50px;
+  }
+ }
+
+@media (max-width: 375px) {
+  .menu-fixo{
+  	position: relative; 
+  }
+  .telefone{
+	line-height: normal;
+	float: none;
+	text-align: center;
+	height: 50px;
+  }
+ }
+
+@media (max-width: 320px) {
+  .menu-fixo{
+  	position: relative; 
+  }
+  .telefone{
+	line-height: normal;
+	float: none;
+	text-align: center;
+	height: 50px;
+  }
+ }

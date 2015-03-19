@@ -35,7 +35,7 @@ function FT_OP_options()
 	// Pull all the pages into an array
 	$options_pages = array();  
 	$options_pages_obj = get_pages('sort_column=post_parent,menu_order');
-	$options_pages[''] = 'Select a page:';
+	$options_pages[''] = 'Selecione a Página:';
 	foreach ($options_pages_obj as $page) {
     	$options_pages[$page->ID] = $page->post_title;
 	}

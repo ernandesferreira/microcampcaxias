@@ -28,8 +28,8 @@
 	<div class="container">
 		<div class="site-info wrap row">
 			<div class="fcred col-12">
-				Copyright &copy; <?php echo date('Y');?> <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a> - <?php bloginfo('description'); ?>.<br />
-<?php fflink(); ?> | <a href="http://fabthemes.com/<?php echo FT_scope::tool()->themeName ?>/" ><?php echo FT_scope::tool()->themeName ?> WordPress Theme</a>
+				Copyright &copy; <?php echo date('Y');?> <span class="link-footer"><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?>- <?php bloginfo('description'); ?>.</span></a> 
+				| Desenvolvido por: <span class="link-footer"><a href="http://www.ernandesferreira.com.br">Ernandes Ferreira </span></a>| Thema Base: <?php echo FT_scope::tool()->themeName ?>.
 			</div>		
 
 		</div><!-- .site-info -->
